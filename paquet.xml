@@ -1,0 +1,13 @@
+<paquet
+	prefix="elix_sans_son"
+	categorie="divers"
+	version="0.1.0"
+	etat="dev"
+	compatibilite="[3.0.0;["
+	logo="prive/themes/spip/images/elix-64.png"
+>
+	<nom>ELIX - Supprimer la bande son des définitions</nom>
+	<auteur mail="kent1@arscenic.info">kent1</auteur>
+
+	<menu nom="menu_elix_sansson" titre="elix_sansson:icone_menu_sansson" parent="menu_elix" icone="images/elix-16.png" action="elix_sans_son" />
+</paquet>
