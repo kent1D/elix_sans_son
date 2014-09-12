@@ -1,0 +1,35 @@
+<h1 class="grostitre"><:elix_sansson:titre_page_elix_sansson:></h1>
+
+<B_documents>
+#BOITE_OUVRIR
+<div class="liste-elements" id="video_signes">
+<table class="spip liste">
+	<caption>
+		<strong class="caption">
+			Définitions avec son
+		</strong>
+	</caption>
+	<thead>
+		<tr class="row_first">
+			<th>Titre</th>
+			<th>Document</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+<BOUCLE_documents(DOCUMENTS spip_articles){articles.id_secteur=94715}{mode=document}{media=video}{hasaudio = oui}{par articles.titre}{pagination 100}>
+	#SET{class_document,row_even}
+	<tr class="[(#GET{class_document})]">
+		[(#GET{class_document}|=={row_even}|?{[(#SET{class_document,row_odd})],[(#SET{class_document,row_even})]})]
+		<td><a href="[(#ID_ARTICLE|generer_url_entite{article})]">#INFO_TITRE{article,#ID_ARTICLE}</a></td>
+		<td>#FICHIER</td>
+		<td>[(#BOUTON_ACTION{Réencoder,[(#URL_ACTION_AUTEUR{elix_sansson_reencode,#ID_DOCUMENT,#SELF})]})]</td>
+	</tr>
+</BOUCLE_documents>
+</tbody>
+</table>
+</div>
+[<p class="pagination">(#PAGINATION)</p>]
+<p><br/><strong>#GRAND_TOTAL videos de définition avec son.</strong></p>
+#BOITE_FERMER
+</B_documents>
