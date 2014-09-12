@@ -9,5 +9,6 @@
 	<nom>ELIX - Supprimer la bande son des définitions</nom>
 	<auteur mail="kent1@arscenic.info">kent1</auteur>
 
+	<pipeline nom="taches_generales_cron" inclure="elix_sans_son_pipelines.php" />
 	<menu nom="menu_elix_sansson" titre="elix_sansson:icone_menu_sansson" parent="menu_elix" icone="images/elix-16.png" action="elix_sans_son" />
 </paquet>
