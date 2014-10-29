@@ -49,6 +49,8 @@ function action_elix_sansson_reencode_dist($arg=false){
 				// supprimer vraiment le fichier initial
 				spip_unlink("$chemin--.old");
 		}
+		if(file_exists($dest))
+			spip_unlink($dest);
 	}
 }
 
